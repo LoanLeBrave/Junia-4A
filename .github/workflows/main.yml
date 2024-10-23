@@ -17,4 +17,4 @@ jobs:
         uses: action/checkout@v2
       
       - name: Run custom command
-        run: echo 23
+        run: echo 232
