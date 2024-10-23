@@ -17,4 +17,4 @@ jobs:
         uses: action/checkout@v2
       
       - name: Run custom command
-        run: echo "je runzz le ssh du truc https github cloud"
+        run: echo 23
