@@ -1,6 +1,5 @@
-name: PHP Lint
+name: Develop Workflow
 
-# Événement déclencheur
 on:
   push:
     branches:
@@ -8,13 +7,16 @@ on:
 
 jobs:
   lint:
-    # Exécuter sur le runner self-hosté
-    runs-on: self-hosted
 
+    runs-on: self-hosted
+    name: PHP Lint
     steps:
-      # Extraire le code source
       - name: Checkout code
-        uses: action/checkout@v2
-      
-      - name: Run custom command
-        run: echo 232
+        uses: actions/checkout@v3
+
+
+      - name: PHP Lint
+        run: |
+          for file in $(find . -name "*.php"); do
+            php -l "$file"
+          done
