@@ -14,4 +14,7 @@ jobs:
     steps:
       # Extraire le code source
       - name: Checkout code
+        uses: action/checkout@v2
+      
+      - name: Run custom command
       - run: echo je run le ssh du truc https github cloud
