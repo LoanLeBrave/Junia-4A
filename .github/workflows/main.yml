@@ -29,7 +29,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t loanlebrave/my-site:latest .
+          docker build -t loanlebrave/image_loan:latest /home/localhost/Junia-4A
 
   push:
     runs-on: ubuntu-latest
@@ -45,5 +45,5 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push loanlebrave/my-site:latest
+          docker push loanlebrave/image_loan:latest
 
